@@ -34,16 +34,16 @@ const bad = {
 
 const wrongEmail = {
   email: "molly@notbooks.com",
-    password: "mollymember",
+  password: "mollymember",
 };
 
 const wrongPassword = {
-       email: "molly@books.com",
+  email: "molly@books.com",
   password: "notmollyspasswd",
 };
 
 test("OK", async () => {
-    const member = login.molly
+  const member = login.molly;
   await request
     .post("/api/graphql")
     .send({

@@ -1,0 +1,22 @@
+
+query AllUsers {
+  user { id, name }
+}
+
+mutation CreateUser {
+  createUser(input: {
+    email: "teresa@books.com"
+    name: "Teresa Member"
+    password: "teresamember"
+  }) {
+    id, name
+  }
+}
+
+mutation DeleteUser {
+  deleteUser(input: {
+    id: ""
+  }) {
+    id, name
+  }
+}

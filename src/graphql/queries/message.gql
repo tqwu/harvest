@@ -1,0 +1,33 @@
+
+query AllMessages {
+  message(cid: "") { id, cid, sender, message }
+}
+
+mutation CreateMessage {
+  createMessage(input: {
+    cid: ""
+    message: "New Message"
+  }) {
+    # id, cid, sender, message
+    id
+  }
+}
+
+mutation DeleteMessage {
+  deleteMessage(input: {
+    id: ""
+  }) {
+    # id, cid, sender, message
+    id
+  }
+}
+
+mutation EditMessage {
+  editMessage(input: {
+    id: ""
+    message: ""
+  }) {
+    # id, cid, sender, message
+    id
+	}
+}

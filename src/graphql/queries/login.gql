@@ -1,0 +1,9 @@
+
+query login {
+  login(
+    email: "molly@books.com"
+    password: "mollymber"
+  ) {
+    name, id, accessToken
+  }
+}

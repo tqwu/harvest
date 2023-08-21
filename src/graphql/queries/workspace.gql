@@ -1,0 +1,21 @@
+
+query AllWorkspaces {
+  workspace { id, uid, name }
+}
+
+mutation CreateWorkspace {
+  createWorkspace(input: {
+    name: "New Workspace"
+  }) {
+    # id, uid, name
+    id
+  }
+}
+
+mutation DeleteWorkspace {
+  deleteWorkspace(input: {
+    id: ""
+  }) {
+    id, uid, name
+	}
+}

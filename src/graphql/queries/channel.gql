@@ -1,0 +1,23 @@
+
+query AllChannels {
+  channel(wid: "") {id, wid, name}
+}
+
+mutation CreateChannel {
+  createChannel(input: {
+    wid: ""
+    name: "New Channel"
+  }) {
+    # id, wid, name
+    id
+  }
+}
+
+mutation DeleteChannel {
+  deleteChannel(input: {
+    id: ""
+  }) {
+    # id, wid, name
+    id
+	}
+}

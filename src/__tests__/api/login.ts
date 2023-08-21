@@ -17,11 +17,11 @@ const nobby = {
 };
 
 async function login(
-    request: SuperTest<Test>,
-  member: any,
+  request: SuperTest<Test>,
+  member: Credentials,
 ): Promise<string> {
-  let accessToken = ""
-      await request
+  let accessToken = "";
+  await request
     .post("/api/graphql")
     .send({
       query: `{login(email: "${member.email}" password: 

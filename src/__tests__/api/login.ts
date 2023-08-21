@@ -12,13 +12,13 @@ export const anna = {
 };
 
 const nobby = {
-  email: "nobby@books.com",
+    email: "nobby@books.com",
   password: "nobbynobody",
 };
 
 async function login(
-  request: SuperTest<Test>,
-  member: Credentials,
+  request: any,
+    member: Credentials,
 ): Promise<string> {
   let accessToken = "";
   await request

@@ -12,15 +12,15 @@ export const anna = {
 };
 
 const nobby = {
-    email: "nobby@books.com",
+  email: "nobby@books.com",
   password: "nobbynobody",
 };
 
 async function login(
-  request: any,
-    member: Credentials,
+  request: SuperTest<Test>,
+  member: Credentials,
 ): Promise<string> {
-    let accessToken = "";
+  let accessToken = "";
   await request
     .post("/api/graphql")
     .send({

@@ -20,7 +20,7 @@ async function login(
   request: any,
     member: Credentials,
 ): Promise<string> {
-  let accessToken = "";
+    let accessToken = "";
   await request
     .post("/api/graphql")
     .send({

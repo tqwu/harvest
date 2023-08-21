@@ -14,7 +14,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*": "prettier --write --ignore-unknown"
+    "*": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
     "@jest/globals": "^29.6.2",

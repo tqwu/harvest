@@ -8,7 +8,7 @@ export const molly = {
 
 export const anna = {
   email: "anna@books.com",
-     password: "annaadmin",
+  password: "annaadmin",
 };
 
 const nobby = {
@@ -18,7 +18,7 @@ const nobby = {
 
 async function login(
   request: SuperTest<Test>,
-     member: Credentials,
+  member: Credentials,
 ): Promise<string> {
   let accessToken = "";
   await request

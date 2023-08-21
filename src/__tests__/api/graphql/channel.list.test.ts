@@ -11,7 +11,7 @@ let server: http.Server<
   typeof http.ServerResponse
 >;
 let request: supertest.SuperTest<supertest.Test>;
-let accessToken: string | undefined;
+let accessToken: any;
 
 jest.setTimeout(10000);
 

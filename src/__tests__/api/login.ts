@@ -6,13 +6,13 @@ export const molly = {
   password: "mollymember",
 };
 
-export const anna = {
+  export const anna = {
   email: "anna@books.com",
   password: "annaadmin",
 };
 
 const nobby = {
-  email: "nobby@books.com",
+      email: "nobby@books.com",
   password: "nobbynobody",
 };
 

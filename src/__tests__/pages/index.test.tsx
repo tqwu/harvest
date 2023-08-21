@@ -1,14 +1,13 @@
+import { render, screen } from "@testing-library/react";
+import "whatwg-fetch";
 
-import { render, screen } from '@testing-library/react'
-import 'whatwg-fetch'
-
-import Index from '../../pages/index';
+import Index from "../../pages/index";
 
 const renderView = async () => {
-  render(<Index />)
+  render(<Index />);
 };
 
-test('Renders', async () => {
-  renderView()
-  await screen.findByText('Index Page')
+test("Renders", async () => {
+  renderView();
+  await screen.findByText("Index Page");
 });

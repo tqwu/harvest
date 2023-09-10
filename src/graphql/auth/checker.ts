@@ -3,6 +3,14 @@ import type { NextApiRequest } from "next";
 
 import { AuthService } from "./service";
 
+interface CustomNextApiRequest extends NextApiRequest {
+  req: {
+    headers: {
+      authorization: string;
+    };
+  };
+}
+
 async function authChecker(
   context: NextApiRequest,
   authHeader: string,
@@ -16,7 +24,7 @@ async function authChecker(
   return true;
 }
 
-export const nextAuthChecker: AuthChecker<NextApiRequest> = async (
+export const nextAuthChecker: AuthChecker<CustomNextApiRequest> = async (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   { root, args, context, info },
   roles,
